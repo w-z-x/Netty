@@ -1,4 +1,4 @@
-package block;
+package io;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -31,7 +31,7 @@ public class BlockIOServer {
         serverSocket.close();
     }
 
-    static String processRequest(String request) throws IOException {
+    private static String processRequest(String request) {
         System.out.println("Received: " + request);
         return "Hello, " + request;
     }
