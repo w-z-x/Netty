@@ -10,7 +10,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>ServerClient</artifactId>
+    <artifactId>SimpleNetty</artifactId>
     <packaging>pom</packaging>
 
     <modules>
