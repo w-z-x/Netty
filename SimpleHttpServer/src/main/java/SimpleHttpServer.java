@@ -34,7 +34,7 @@ public class SimpleHttpServer {
         @Override
         public void handle(HttpExchange httpExchange) throws IOException {
             String queryString = httpExchange.getRequestURI().getQuery();
-            Map<String, String> map = str2Map(queryString);
+            Map<String, String> map = str2map(queryString);
             Headers responseHeaders = httpExchange.getResponseHeaders();
             responseHeaders.set("Content-Type", "text/html;charset=utf-8");
             httpExchange.sendResponseHeaders(200, 0);
@@ -45,7 +45,7 @@ public class SimpleHttpServer {
         }
     }
 
-    private static Map<String, String> str2Map(String queryString) {
+    private static Map<String, String> str2map(String queryString) {
         Map<String, String> result = new HashMap<>();
         if (queryString == null || queryString.trim().length() == 0) {
             return result;
@@ -69,8 +69,8 @@ public class SimpleHttpServer {
     static class PostHandler implements HttpHandler {
         @Override
         public void handle(HttpExchange httpExchange) throws IOException {
-            String postString = is2String(httpExchange.getRequestBody());
-            Map<String, String> map = str2Map(postString);
+            String postString = is2str(httpExchange.getRequestBody());
+            Map<String, String> map = str2map(postString);
             Headers responseHeaders = httpExchange.getResponseHeaders();
             responseHeaders.set("Content-Type", "text/html;charset=utf-8");
             httpExchange.sendResponseHeaders(200, 0);
@@ -81,7 +81,7 @@ public class SimpleHttpServer {
         }
     }
 
-    private static String is2String(InputStream is) throws IOException {
+    private static String is2str(InputStream is) throws IOException {
         ByteArrayOutputStream result = new ByteArrayOutputStream();
         byte[] buffer = new byte[1024];
         int length;
