@@ -4,10 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>netty</groupId>
+    <parent>
+        <artifactId>Netty</artifactId>
+        <groupId>me.wu</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
     <artifactId>ServerClient</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
 
     <modules>
         <module>EchoServer</module>
@@ -18,7 +22,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
-
         <echo-server.hostname>localhost</echo-server.hostname>
         <echo-server.port>8080</echo-server.port>
     </properties>
