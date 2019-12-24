@@ -12,6 +12,7 @@
     <modules>
         <module>BlockIO</module>
         <module>SimpleNetty</module>
+        <module>SimpleHttpServer</module>
     </modules>
 
     <properties>
