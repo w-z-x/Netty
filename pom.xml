@@ -13,6 +13,7 @@
         <module>BlockIO</module>
         <module>SimpleNetty</module>
         <module>SimpleHttpServer</module>
+        <module>SomeIoServers</module>
     </modules>
 
     <properties>
