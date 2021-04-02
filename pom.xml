@@ -10,7 +10,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
-        <module>BlockIO</module>
+        <module>0.BlockIO</module>
         <module>SimpleNetty</module>
         <module>SimpleHttpServer</module>
         <module>SomeIoServers</module>
